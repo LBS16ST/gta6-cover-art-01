@@ -1,0 +1,15 @@
+Fonts shipped with Vice Coast Cover Studio
+==========================================
+
+Anton-Regular.ttf
+  Anton, by Vernon Adams and the Anton Project Authors.
+  Licensed under the SIL Open Font License, Version 1.1 (see Anton-OFL.txt).
+  Source: https://github.com/google/fonts/tree/main/ofl/anton
+
+Pacifico-Regular.ttf
+  Pacifico, by Vernon Adams and the Pacifico Project Authors.
+  Licensed under the SIL Open Font License, Version 1.1 (see Pacifico-OFL.txt).
+  Source: https://github.com/google/fonts/tree/main/ofl/pacifico
+
+Both fonts are used only for the cover lettering in this app. No Rockstar Games
+font, logo or artwork is used anywhere in this project.
