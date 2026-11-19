@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Coast Cover Studio</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls" aria-label="Cover controls">
+    <header>
+      <h1>Vice Coast<br>Cover Studio</h1>
+      <p>Turn any photo and a caption into a Vice City sunset poster.
+      Everything runs offline &mdash; your photos never leave this machine.</p>
+    </header>
+
+    <section class="group" aria-label="Photos">
+      <h2>1 &middot; Photos</h2>
+      <label class="file-btn">Add photos
+        <input id="photos" type="file" accept="image/*" multiple>
+      </label>
+      <button id="sample-photos" type="button" class="ghost">Use the two sample photos</button>
+      <div id="tray" class="tray" aria-label="Loaded photos"></div>
+      <p class="hint">Click a photo, then click a panel to place it there.
+      Drag a panel to move the photo, scroll over it to zoom.</p>
+      <div class="row">
+        <label>Zoom <input id="zoom" type="range" min="1" max="3" step="0.01" value="1"></label>
+        <button id="fit" type="button" class="ghost">Fit panel</button>
+      </div>
+    </section>
+
+    <section class="group" aria-label="Layout">
+      <h2>2 &middot; Layout</h2>
+      <div id="layouts" class="pick-grid" role="radiogroup" aria-label="Panel layout"></div>
+    </section>
+
+    <section class="group" aria-label="Colour grade">
+      <h2>3 &middot; Grade</h2>
+      <div id="grades" class="pick-grid" role="radiogroup" aria-label="Colour grade"></div>
+    </section>
+
+    <section class="group" aria-label="Lettering">
+      <h2>4 &middot; Lettering</h2>
+      <label>Title <input id="title" type="text" maxlength="24" value="VICE COAST"></label>
+      <label>Subtitle <input id="subtitle" type="text" maxlength="40" value="one last ride"></label>
+      <label>Badge <input id="badge" type="text" maxlength="16" value="LEONIDA"></label>
+      <label class="check"><input id="title-gradient" type="checkbox" checked> Sunset gradient on the title</label>
+    </section>
+
+    <section class="group" aria-label="Export">
+      <h2>5 &middot; Export PNG</h2>
+      <div id="sizes" class="pick-grid" role="radiogroup" aria-label="Export size"></div>
+      <button id="export" type="button" class="primary">Export PNG</button>
+      <button id="export-all" type="button">Export all three sizes</button>
+      <div class="row">
+        <button id="undo" type="button" class="ghost">Undo</button>
+        <button id="redo" type="button" class="ghost">Redo</button>
+        <button id="shuffle" type="button" class="ghost">Surprise me</button>
+        <button id="reset" type="button" class="ghost">Reset</button>
+      </div>
+      <p id="status" role="status"></p>
+    </section>
+
+    <footer>
+      <p>Original art made here. No Rockstar Games logo, artwork or font.
+      Lettering: Anton &amp; Pacifico, SIL Open Font License (see app/fonts/).</p>
+    </footer>
+  </section>
+
+  <section class="stage" aria-label="Cover preview">
+    <canvas id="cover" width="1080" height="1080" aria-label="The cover preview"></canvas>
+    <p id="panel-hint" class="panel-hint">Panel 1 of 4 selected</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
